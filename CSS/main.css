@@ -1,0 +1,9 @@
+body {
+    /* font-size 명시적으로 입력하지 않아도 기본적으로 16px 이다. */
+    font-size: 16px; 
+    /* 줄 높이 */
+    line-height: 1;
+    font-family: "Roboto", "Noto Sans KR", sans-serif;
+    /*  */
+    word-break: keep-all;
+}
