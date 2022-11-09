@@ -67,6 +67,9 @@ function hideSearch() {
     headerEl.classList.remove('searching')
     // 검색바가 나타나면 화면이 고정되도록 만들었다.
     document.documentElement.classList.remove('fixed')
+    headerMenuEls.reverse().forEach(function (el, index) {
+        el.style.transitionDelay = index * .4 / headerMenuEls.length + 's'
+    })
 }
 
 
