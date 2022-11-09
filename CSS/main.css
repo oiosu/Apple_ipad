@@ -164,7 +164,9 @@ header .basket.show{
   top: 0;
   left: 0;
   width: 100%;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s;
  }
 
  header .search{
@@ -262,13 +264,33 @@ header .basket.show{
   color: #0071e3;
  }
 
+header .search input, 
+header .search .search-icon,
+header .search .autocompletes h3,
+header .search .autocompletes li {
+  transition: .6s;
+  /* translate 이동하는 함수 */
+  transform: translate(100px, 0);
+}
+
+
  header.searching ul.menu > li{
   transform: scale(.7); /* 크기가 조금 작아지면서 */
   opacity: 0; /* 투명해진다 */
  }
 
  header.searching .search-wrap {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  /* 사라질때는 바로 사라지도록! */
+  transition-delay: .2s;
  }
 
+ header .search input, 
+ header .search .search-icon,
+ header .search .autocompletes h3,
+ header .search .autocompletes li {
+  transition-delay: .2s;   
+  transform: translate(0, 0);
+ }
  

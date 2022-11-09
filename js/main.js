@@ -43,6 +43,7 @@ const searchWrapEl = headerEl.querySelector('.search-wrap')
 const searchStarterEl = headerEl.querySelector('.search-starter')
 const searchCloserEl = searchWrapEl.querySelector('.search-closer')
 const searchShadowEl = searchWrapEl.querySelector('.shadow')
+const searchDelayEls = [...searchWrapEl.querySelectorAll('li')]
 
 // searchStarterEl.addEventListener('click', function () {
 //     showSearch()
@@ -62,6 +63,9 @@ function showSearch() {
         //  index 숫자는 0 부터 시작한다. 
         el.style.transitionDelay = index * .4 / headerMenuEls.length + 's'
     })
+    searchDelayEls.forEach(function (el, index) {
+        el.style.transitionDelay = index * .4 / searchDelayEls.length + 's'
+    })
 }
 function hideSearch() {
     headerEl.classList.remove('searching')
@@ -70,6 +74,13 @@ function hideSearch() {
     headerMenuEls.reverse().forEach(function (el, index) {
         el.style.transitionDelay = index * .4 / headerMenuEls.length + 's'
     })
+    searchDelayEls.reverse().forEach(function (el, index) {
+        el.style.transitionDelay = index * .4 / searchDelayEls.length + 's'
+    })
+    // 원래 상태로 다시 뒤집어 준다
+    searchDelayEls.reverse()
 }
+
+
 
 
