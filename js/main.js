@@ -32,3 +32,31 @@ function showBasket(){
 function hideBasket(){
     basketEL.classList.remove('show')
 }
+
+
+// 검색!!!
+const headerEl = document.querySelector('header')
+const searchWrapEl = headerEl.querySelector('.search-wrap')
+const searchStarterEl = headerEl.querySelector('.search-starter')
+const searchCloserEl = searchWrapEl.querySelector('.search-closer')
+const searchShadowEl = searchWrapEl.querySelector('.shadow')
+
+// searchStarterEl.addEventListener('click', function () {
+//     showSearch()
+// })
+
+//  더 깔금하게 코드 작성하기 
+// 자바스크립트 part 에서 더 자세하게 공부필요!
+searchStarterEl.addEventListener('click', showSearch)
+searchCloserEl.addEventListener('click', hideSearch)
+searchShadowEl.addEventListener('click', hideSearch)
+
+function showSearch() {
+    headerEl.classList.add('searching')
+    document.documentElement.classList.add('fixed')
+}
+function hideSearch() {
+    headerEl.classList.remove('searching')
+    // 검색바가 나타나면 화면이 고정되도록 만들었다.
+    document.documentElement.classList.remove('fixed')
+}

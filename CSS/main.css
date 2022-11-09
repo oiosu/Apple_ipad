@@ -1,12 +1,19 @@
+html.fixed {
+  position: fixed;
+  overflow: scroll;
+  width: 100%;
+}
+
 body {
-    /* font-size 명시적으로 입력하지 않아도 기본적으로 16px 이다. */
-    font-size: 16px; 
-    /* 줄 높이 */
-    line-height: 1;
-    font-family: "Roboto", "Noto Sans KR", sans-serif;
-    /*  */
-    word-break: keep-all;
-    color: #1d1d1d;
+  height: 10000px;
+  /* font-size 명시적으로 입력하지 않아도 기본적으로 16px 이다. */
+  font-size: 16px; 
+  /* 줄 높이 */
+  line-height: 1;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  /*  */
+  word-break: keep-all;
+  color: #1d1d1d;
 }
 
 /* 전체 a 태그에 기본적으로 밑줄이 생기지 않도록 공통 스타일 적용 */
@@ -156,6 +163,7 @@ header .basket.show{
   top: 0;
   left: 0;
   width: 100%;
+  display: none;
  }
 
  header .search{
@@ -256,3 +264,9 @@ header .basket.show{
  header.searching ul.menu > li{
   display: none;
  }
+
+ header.searching .search-wrap {
+  display: block;
+ }
+
+ 
