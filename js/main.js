@@ -36,6 +36,9 @@ function hideBasket(){
 
 // 검색!!!
 const headerEl = document.querySelector('header')
+// ... : 전개 연산자 spread operator
+// 전개 연산자를 이용한 얕은 복사 shallow copy
+const headerMenuEls = [...headerEl.querySelectorAll('ul.menu > li')]
 const searchWrapEl = headerEl.querySelector('.search-wrap')
 const searchStarterEl = headerEl.querySelector('.search-starter')
 const searchCloserEl = searchWrapEl.querySelector('.search-closer')
@@ -54,9 +57,16 @@ searchShadowEl.addEventListener('click', hideSearch)
 function showSearch() {
     headerEl.classList.add('searching')
     document.documentElement.classList.add('fixed')
+    // 순차적으로 사라지도록 만들었다. 
+    headerMenuEls.reverse().forEach(function (el, index) {
+        //  index 숫자는 0 부터 시작한다. 
+        el.style.transitionDelay = index * .4 / headerMenuEls.length + 's'
+    })
 }
 function hideSearch() {
     headerEl.classList.remove('searching')
     // 검색바가 나타나면 화면이 고정되도록 만들었다.
     document.documentElement.classList.remove('fixed')
 }
+
+

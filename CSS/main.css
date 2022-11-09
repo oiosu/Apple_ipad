@@ -44,6 +44,7 @@ header ul.menu {
 header ul.menu > li {
     display: flex;
     position: relative;
+    transition: .4s;
 }
 
 header ul.menu > li > a {
@@ -262,7 +263,8 @@ header .basket.show{
  }
 
  header.searching ul.menu > li{
-  display: none;
+  transform: scale(.7); /* 크기가 조금 작아지면서 */
+  opacity: 0; /* 투명해진다 */
  }
 
  header.searching .search-wrap {
