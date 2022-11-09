@@ -72,19 +72,25 @@ header ul.menu > li > a:hover{
 
 /* Header / Menu / Basket */
 header .basket {
-    width: 290px;
-    padding: 10px 20px;
-    border: 1px solid #d2d2d2;
-    border-radius: 10px;
-    /* 요소의 크기가 변경되지 않도록 box-sizing! */
-    box-sizing: border-box;
-    background-color: #fff;
-    position: absolute;
-    /* calc 함수를 통해 100% 만큼 이동을 하되 4px 만큼 이동을 해야한다. */
-    top: calc(100% + 4px);
-    right: -6px;
-  }
+  display: none;
+  width: 290px;
+  padding: 10px 20px;
+  border: 1px solid #d2d2d2;
+  border-radius: 10px;
+  /* 요소의 크기가 변경되지 않도록 box-sizing! */
+  box-sizing: border-box;
+  background-color: #fff;
+  position: absolute;
+  /* calc 함수를 통해 100% 만큼 이동을 하되 4px 만큼 이동을 해야한다. */
+  top: calc(100% + 4px);
+  right: -6px;
+}
+header .basket.show{
+  display: block;
+}
   
+
+
   header .basket .arrow{
     width: 20px;
     height: 10px;
