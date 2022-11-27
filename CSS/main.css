@@ -50,6 +50,7 @@ a {
 /* Header */
 header {
     background-color: #3a3a3a;
+    
 }
 
 header .inner {
@@ -296,6 +297,7 @@ header .search .autocompletes li {
   transition: .6s;
   /* translate 이동하는 함수 */
   transform: translate(100px, 0);
+  
 }
 
 
@@ -351,19 +353,60 @@ header .search .autocompletes li {
 
  nav .menu li a{
   display: block;
-  pad: 6px;
+  padding: 6px;
   font-size: 11px;
+ }
+
+ nav .menu li.active a {
+  opacity: .5;
+  cursor: default;
  }
 
  nav .menu li:hover a {
   color : #0071e3;
  }
  
- nav .menu li.active a {
-  opacity: .5;
-  cursor: default;
- }
-
  nav .menu li.active:hover a {
   color: #1d1d1d;
+ }
+
+ /* Hero */
+ .hero {
+  
+ }
+ .hero .inner {
+
+ }
+ .hero h1 {
+
+ }
+ .hero figure {
+
+ }
+ .hero figure figcaption {
+
+ }
+ .hero figure figcaption .caption-camera {
+
+ }
+ .hero figure figcaption .caption-chip {
+
+ }
+ .hero figure figcaption .caption-storage {
+
+ }
+
+ /* 두번째 제목 */
+ .hero h2 {
+
+ }
+
+ .hero p.pricing {
+
+ }
+ .hero p.description {
+
+ }
+ .hero .links {
+  
  }
