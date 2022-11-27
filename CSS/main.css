@@ -28,8 +28,10 @@ a {
   justify-content: center;
   align-items: center;
   height: 24px;
+  /* 좌우 여백만 추가 */
   padding: 0 10px;
   border: none;
+  /* 전부 둥글게 */
   border-radius: 100px;
   outline: none;
   font-size: 11px;
@@ -39,10 +41,11 @@ a {
   cursor: pointer;
 }
 .btn:hover{
+  /* 불투명도 */
   opacity: .7;
 }
 .btn:focus{
-  /* x값, y값, blur 값, spread, 그림자 색상 */
+  /* x값, y값, blur 값(흐림처리), spread, 그림자 색상 */
   box-shadow: 0 0 0 4px #81b9f1;
 }
 
@@ -323,11 +326,17 @@ header .search .autocompletes li {
  
  /* Navigation */
  nav{
+  /* 투명도 값 .7 */
   background-color: rgb(255, 255, 255, .7);
+  /* 블러 처리 */
   backdrop-filter: blur(20px);
+  /* 아래 한줄의 테두리 선 */
   border-bottom: 1px solid #d2d2d2;
+  /* 상단 위에 있도록 */
   position: sticky;
+  /* 상단 붙어있을때 위치 */
   top: 0;
+  /* 다른 요소보다 위에 있어야 하기 때문 */
   z-index: 8;
  }
 
@@ -335,11 +344,14 @@ header .search .autocompletes li {
   max-width: 1000px;
   height: 52px;
   margin: 0 auto;
+  /* 수평 정렬 */
   display: flex;
   align-items: center;
  }
 
  nav h1 {
+  /* 최대한 늘어나도록 설정 */
+  /* 오른쪽으로 이동 */
   flex-grow: 1;
   font-size: 22px;
   font-weight: 500;
@@ -351,6 +363,7 @@ header .search .autocompletes li {
   margin-right: 18px;
  }
 
+ /* a태그는 인라인태그 */
  nav .menu li a{
   display: block;
   padding: 6px;
