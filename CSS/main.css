@@ -101,6 +101,23 @@ a.link::after {
   content: " >";
 }
 
+/* figures */
+.figures {
+  position: relative;
+}
+
+.figures figure,
+.figures figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.figures figcaption * {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 /* Header */
 header {
